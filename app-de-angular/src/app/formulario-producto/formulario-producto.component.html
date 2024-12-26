@@ -1,0 +1,59 @@
+<h2>{{titulo}}</h2>
+
+<form (submit)="guardarCambios()" [formGroup]="form">
+    <table>
+        <tr>
+            <td>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombres</mat-label>
+                    <input [formControl]="form.controls.nombre" matInput />
+                </mat-form-field>
+            </td>            
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field appearance="outline">
+                    <mat-label>Apellidos</mat-label>
+                    <input [formControl]="form.controls.nombre" matInput />
+                </mat-form-field>
+            </td>            
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field appearance="outline">
+                    <mat-label>Numero Identifacion</mat-label>
+                    <input [formControl]="form.controls.nombre" matInput />
+                </mat-form-field>
+            </td>            
+        </tr>
+
+        <tr>
+            <td>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input [formControl]="form.controls.nombre" matInput />
+                </mat-form-field>
+            </td>            
+        </tr>
+
+        <tr>
+            <td>
+                <mat-form-field>
+                    <mat-label>Tipo Identificacion</mat-label>
+                    <select matNativeControl required>
+                    <option value="C">Cedula</option>
+                    <option value="R">RUC</option>
+                    <option value="P">Pasaporte</option>
+                    <option value="O">Otro</option>
+                    </select>
+                </mat-form-field>
+            </td>            
+        </tr>
+    </table>
+
+
+    <div>
+        <button type="submit" mat-flat-button>Guardar Cambios</button>
+        <a mat-stroked-button routerLink="/productos">Cancelar</a>
+    </div>
+</form>
